@@ -1,9 +1,8 @@
-@header: #006cb7;
-@footer: #d3d3d3;
+@download: #1d2631;
 @black: #000;
  
 @font-face {
-  font-family: "OpenSans"; 
+  font-family: "dddd"; 
   font-style: normal;
   font-weight: 400;
   src: url(../fonts/PFCentroSansPro-Light.eot);
@@ -14,6 +13,14 @@
 * {
   margin: 0;
   padding: 0;
+}
+
+body {
+  color: #000;
+  font-family: "Open Sans", 'Arial', sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
 }
 
 .wrapper {
@@ -29,14 +36,13 @@ li {list-style-type: none;}
 
 .header {
   height: 66px;
-  background-color: fadeout(@black, 70%);
+  background-color: fadeout(@black, 50%);
   display: flex;
   align-items: center;
   
   & > .wrapper {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
   }
 
   &-menu {
@@ -60,10 +66,43 @@ li {list-style-type: none;}
   position: relative;
 
   &-hand {
-
+    background-image: url(../images/hand.png);
+    background-position: 200% 20%;
+    background-size: cover;
+    box-sizing: border-box;
+    height: 75%;
+    width: 500px;
+    position:absolute;
+    bottom: 0;
   }
 }
 
 .download {
-  
+  box-sizing: border-box;
+  background-color: @download;
+  padding-top: 28px;
+  padding-bottom: 32px;
+
+  &-button {
+      box-sizing: border-box;
+      border: 3px solid #fff;
+      width: 280px;
+      border-radius: 30px;
+      padding: 15px 40px;
+      margin: 0 auto;
+      margin-bottom: 30px;
+
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
+  }
+
+  &-icons {
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-bottom: 25px;
+  }
 }

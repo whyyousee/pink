@@ -212,13 +212,42 @@ li {list-style-type: none;}
 
 .priceTable {
   text-transform: uppercase;
+  color: #fff;
+
+  table {width: 100%;
+
+    td {
+      padding: 10px;
+      border: 2px solid @sliderBorder;
+      }
+  }
 
   &-item {
-    background-color: blue;
     border: 2px solid @sliderBorder;
+
+    &-heading {
+      background-color: #283645;
+      text-align: center;
+
+     p {font-size: 24px;}
+    }
+
+    &-row {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &-option {
+      text-align: left;
+      font-size: 14px;
+      color: #000;
+    }
+
+    &-check {
+      width: 31px;
+      height: 26px;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
   }
-}
-
-.ddddddd {
-
 }

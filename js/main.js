@@ -15,6 +15,7 @@ $(document).ready(function () {
 	  	owl.owlCarousel({
 		    items:1.4,
 		    // margin: 10, 
+		    autoWidth: true,
 		    startPosition: 1,
 		    center:true,
 		    dots: true,
@@ -25,4 +26,3 @@ $(document).ready(function () {
 	});
 
 });
-

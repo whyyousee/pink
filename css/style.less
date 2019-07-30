@@ -11,6 +11,7 @@
 @dots: #bec2c7;
 @dotsFocus: #7e868f;
 @dotsHover: #283645;
+@contacts: #d22856;
  
 @font-face {
   font-family: "Test"; 
@@ -212,14 +213,14 @@ li {list-style-type: none;}
 .priceTable {
   text-transform: uppercase;
   color: #fff;
-      margin-top: 45px;
+  margin-top: 45px;
 
   table {
     width: 100%;
 
     td {
       padding: 10px;
-      border: 2px solid @sliderBorder;
+      border-bottom: 2px solid @sliderBorder;
       }
   }
 
@@ -260,21 +261,55 @@ li {list-style-type: none;}
   padding-bottom: 45px;
 }
 
-.footer {
+.contacts {
+  padding-top: 50px;
+
+  &-heading {
+    font-size: 24px;
+    color: @dotsHover;
+    margin-bottom: 35px;
+    line-height: 29px;
+  }
+
+  li {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 32px;
   
+    span {
+      color: red;
+      font-size: 24px;
+      line-height: 24px;
+      color: @contacts;
+      font-weight: 400;
+    }
+  }
+
+  li + li {margin-top: 25px;}
+  
+  &-triangle {
+    width: 100%;
+    height: 50px;
+    background-image: url(../images/triangle-footer.png);
+    background-position: center;
+    background-size: cover;
+    z-index: 12;
+    position: relative; 
+  }
 }
 
-.map-responsive{
-    overflow:hidden;
-    padding-bottom:56.25%;
-    position:relative;
-    height:0;
+.map-responsive {
+  margin-top: 40px;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
 
-    iframe{
-    left:0;
-    top:0;
-    height:100%;
-    width:100%;
-    position:absolute;
+  iframe{
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
   }
 }

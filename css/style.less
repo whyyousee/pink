@@ -225,8 +225,9 @@ li {list-style-type: none;}
   }
 
   &-item {
-    border: 2px solid @sliderBorder;
-    width: 279px;
+    box-sizing: border-box;
+    border-left: 2px solid @sliderBorder;
+    width: 279px; 
 
     &-heading {
       background-color: #283645;

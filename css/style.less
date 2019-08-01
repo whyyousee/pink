@@ -79,12 +79,12 @@ li {list-style-type: none;}
 
   &-hand {
     background-image: url(../images/hand.png);
-    background-position: 100% 20%;
+    background-position: center center;
     background-size: cover;
     box-sizing: border-box;
-    height: 75%;
-    width: 80%;
-    position:absolute;
+    height: 314px;
+    width: 314px;
+    position: absolute;
     bottom: 0;
   }
 }
@@ -100,7 +100,7 @@ li {list-style-type: none;}
     border: 3px solid #fff;
     width: 280px;
     border-radius: 30px;
-    padding: 15px 40px;
+    padding: 15px 35px;
     margin: 0 auto;
     font-weight: bold;
     color: #fff;
@@ -120,6 +120,10 @@ li {list-style-type: none;}
     margin: 0 auto;
     margin-bottom: 25px;
     margin-top: 60px;
+
+    a img {
+      height: 47px;
+    }
   }
 
   &-text {
@@ -175,15 +179,15 @@ li {list-style-type: none;}
   }
 
   &-phone {
-    height: 330px;
+    height: 300px;
     background-image: url(../images/helloworld.png);
     background-position: 0 30px;
     background-size: cover;
     background-repeat: no-repeat;
     box-sizing: border-box;
-    width: 40%;
+    width: 157px;
     position: relative;
-    bottom: 0;
+    bottom: 0px;
     margin: 0 auto;
   }
 }
@@ -218,10 +222,7 @@ li {list-style-type: none;}
   table {
     width: 100%;
 
-    td {
-      padding: 10px;
-      border-bottom: 2px solid @sliderBorder;
-      }
+    td {border-bottom: 2px solid @sliderBorder;}
   }
 
   &-item {
@@ -232,11 +233,15 @@ li {list-style-type: none;}
     &-heading {
       background-color: #283645;
       text-align: center;
+      padding: 20px;
 
-     p {font-size: 24px;}
+      h3 {margin-bottom: 5px;}
+      p {font-size: 24px;}
     }
 
     &-row {
+      box-sizing: border-box;
+      padding: 18px 15px;
       display: flex;
       justify-content: space-between;
     }
@@ -244,7 +249,7 @@ li {list-style-type: none;}
     &-option {
       text-align: left;
       font-size: 14px;
-      color: #000;
+      color: @dotsHover;
     }
 
     &-check {
@@ -252,6 +257,16 @@ li {list-style-type: none;}
       height: 26px;
       background-position: center;
       background-repeat: no-repeat;
+    }
+
+    &-hit {
+      background-image: url(../images/hit.png);
+      z-index: 1000;
+      width: 74px;
+      height: 73px;
+      position: absolute;
+      top: 0;
+      left: 0;
     }
   }
 }

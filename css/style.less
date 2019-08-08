@@ -4,15 +4,10 @@
 @import (inline) 'owl.theme.default.css';
 
 @download: #1d2631;
-@black: #000;
+@basic: #283645;
+@hover: #d22856;
 @triangle: #f2f2f2;
-@sliderBorder: #e5e5e5;
-@hover: #d32455;
-@dots: #bec2c7;
-@dotsFocus: #7e868f;
-@dotsHover: #283645;
-@contacts: #d22856;
- 
+
 @font-face {
   font-family: "Test"; 
   font-style: normal;
@@ -46,18 +41,21 @@ li {list-style-type: none;}
 
 /* ----------------------------------- Header ----------------------------------- */
 
-.header {
+header {
   height: 66px;
-  background-color: fadeout(@black, 50%);
+  width: 100%;
+  background-color: rgba(0, 0, 0, 50%);
   display: flex;
   align-items: center;
+  position: absolute;
+  z-index: 100;
   
   & > .wrapper {
     display: flex;
     justify-content: space-between;
   }
 
-  &-menu {
+  .header-menu {
     &-mobile {
       background-image: url(../images/burger.png);
       height: 24px;
@@ -143,7 +141,7 @@ li {list-style-type: none;}
   padding-top: 45px;
   padding-bottom: 30px;
   width: 80%;
-  color: @dotsHover;
+  color: @basic;
   font-weight: lighter;
 
   p + p {
@@ -226,16 +224,16 @@ li {list-style-type: none;}
   table {
     width: 100%;
 
-    td {border-bottom: 2px solid @sliderBorder;}
+    td {border-bottom: 2px solid #e5e5e5}
   }
 
   &-item {
     box-sizing: border-box;
-    border-left: 2px solid @sliderBorder;
+    border-left: 2px solid #e5e5e5;
     width: 279px; 
 
     &-heading {
-      background-color: #283645;
+      background-color: @basic;
       text-align: center;
       padding: 20px;
       font-size: 14px;
@@ -254,7 +252,7 @@ li {list-style-type: none;}
     &-option {
       text-align: left;
       font-size: 14px;
-      color: @dotsHover;
+      color: @basic;
     }
 
     &-check {
@@ -287,7 +285,7 @@ li {list-style-type: none;}
 
   &-heading {
     font-size: 24px;
-    color: @dotsHover;
+    color: @basic;
     margin-bottom: 35px;
     line-height: 29px;
   }
@@ -301,7 +299,7 @@ li {list-style-type: none;}
       color: red;
       font-size: 24px;
       line-height: 24px;
-      color: @contacts;
+      color: @hover;
       font-weight: 400;
     }
   }

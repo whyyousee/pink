@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-	$('.gallery').slick({
+	$('.js-slick').slick({
 	  arrows: false,
 	  dots: true,
 	  slidesToShow: 1,

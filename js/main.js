@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-	$('.js-slick').slick({
+	$('.js-slick-reviews').slick({
 	  arrows: false,
 	  dots: true,
 	  slidesToShow: 1,
@@ -9,20 +9,15 @@ $(document).ready(function () {
 	  infinite: true
 	});
 
-	$(function() {
-	  	// Owl Carousel
-	  	var owl = $(".owl-carousel");
-	  	owl.owlCarousel({
-		    items:1.4,
-		    // margin: 10, 
-		    autoWidth: true,
-		    startPosition: 1,
-		    center:true,
-		    dots: true,
-		   	mouseDrag: false,
-        	touchDrag: false,
-		    nav: false
-	 	});
+	$('.js-slick-prices').slick({
+	  arrows: false,
+	  dots: true,
+	  slidesToShow: 1,
+	  swipe: false,
+	  variableHeight: true,
+	  infinite: false,
+	  centerMode: true,
+	  initialSlide: 1
 	});
 
 });

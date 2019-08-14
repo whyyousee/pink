@@ -138,14 +138,6 @@ header {
     padding-top: 40px;
     }
 
-    &-triangle {
-      width: 100%;
-      height: 80px;
-      background-image: url(../images/bg-triangle-white.svg);
-      background-position: center;
-      background-size: cover;
-    }
-
     &-text {
       margin: 0 auto;
       width: 80%;
@@ -177,6 +169,14 @@ header {
   }
 }
 
+.triangle {
+  width: 100%;
+  height: 80px;
+  background-image: url(../images/bg-triangle-white.svg);
+  background-position: center;
+  background-size: cover;
+}
+
 .reviews {
   box-sizing: border-box;
   padding-top: 50px;
@@ -192,31 +192,28 @@ header {
 
     &-text {
       line-height: 30px;
-      margin-bottom: 90px;
+      margin-bottom: 99px;
     }
   }
 }
 
-.priceTable {
+.prices {
   text-transform: uppercase;
   color: #fff;
   margin-top: 45px;
-
-  table {
-    width: 100%;
-
-    td {border-bottom: 2px solid #e5e5e5}
-  }
-
+  width: 100%;
+ 
   &-item {
     box-sizing: border-box;
     border-left: 2px solid #e5e5e5;
     width: 279px; 
+    margin-bottom: 99px;
 
     &-heading {
       background-color: @basic;
       text-align: center;
-      padding: 20px;
+      padding-top: 20px;
+      padding-bottom: 20px;
       font-size: 14px;
 
       h3 {margin-bottom: 5px;}
@@ -228,6 +225,7 @@ header {
       padding: 18px 15px;
       display: flex;
       justify-content: space-between;
+      border-bottom: 2px solid #e5e5e5;
     }
 
     &-option {
@@ -250,12 +248,12 @@ header {
       height: 73px;
       position: absolute;
       top: 0;
-      left: 0;
+      margin-left: -2px;
     }
   }
 }
 
-.tableWrapper {
+.pricesWrapper {
   background-color: @triangle;
   font-size: 15px;
   padding-bottom: 45px;

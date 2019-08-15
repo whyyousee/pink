@@ -22,6 +22,7 @@ header {
   align-items: center;
   position: absolute;
   z-index: 100;
+  transition: background-color 0.3s ease, border-bottom 0.3s ease;
   
   & > .wrapper {
     display: flex;
@@ -31,6 +32,8 @@ header {
   .header-menu {
     &-mobile {
       background-image: url(../images/burger.png);
+      background-position: center;
+      background-repeat: no-repeat;
       height: 24px;
       width: 50px;
       cursor: pointer;
@@ -314,4 +317,40 @@ header {
     z-index: 12;
     position: relative; 
   }
+}
+
+.mobileMenu {
+  display: none;
+  position: absolute;
+  top: 66px;
+  width: 100%;
+  border-top: 1px solid #000;
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 66px;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: @basic;
+    border-top: 1px solid #485461;
+    border-bottom: 1px solid #000;
+    text-align: center;
+
+
+    &:hover {
+      background-color: @download;
+    }
+  }
+}
+
+.headerActive {
+  background-color: @basic;
+}
+
+.header-menu-close {
+  background-image: url(../images/close.png) !important;
 }

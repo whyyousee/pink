@@ -1,9 +1,8 @@
 $(document).ready(function () {
 
 	$('.js-toggleMenu').click(function() {
-    	$('.mobileMenu').fadeToggle(300);
-    	$('.header-menu-mobile').fadeIn(300);
-    	$('header').toggleClass('headerActive');
+    	$('.mobileMenu').slideToggle(300);
+    	$(".headerStatic").toggleClass("headerActive");
     	$(".header-menu-mobile").toggleClass("header-menu-close");
   	});
 

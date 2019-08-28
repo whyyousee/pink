@@ -15,18 +15,19 @@ li {list-style-type: none;}
 /* ----------------------------------- Header ----------------------------------- */
 
 header {
-  height: 66px;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 50%);
-  display: flex;
-  align-items: center;
-  position: absolute;
-  z-index: 100;
-  transition: background-color 0.3s ease, border-bottom 0.3s ease;
   
-  & > .wrapper {
-    display: flex;
+  .headerStatic {
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-right: 20px;
     justify-content: space-between;
+    height: 66px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 50%);
+    display: flex;
+    align-items: center;
+    position: absolute;
+    z-index: 100;
   }
 
   .header-menu {
@@ -332,10 +333,11 @@ header {
 
 .mobileMenu {
   display: none;
-  position: absolute;
-  top: 66px;
   width: 100%;
   border-top: 1px solid #000;
+  position: relative;
+  top: 66px;
+  z-index: 1000;
 
   a {
     display: flex;
@@ -351,7 +353,6 @@ header {
     border-bottom: 1px solid #000;
     text-align: center;
 
-
     &:hover {
       background-color: @download;
     }
@@ -359,9 +360,8 @@ header {
 }
 
 .headerActive {
-  background-color: @basic;
+  background-color: @basic !important;
 }
 
 .header-menu-close {
-  background-image: url(../images/close.png) !important;
-}
+  background-image: url(../images/close.png) !important;}

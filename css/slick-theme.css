@@ -119,7 +119,6 @@ content: url(../images/right-arrow.png);
 .slick-dots
 {
     position: absolute;
-    bottom: 30px;
     display: flex;
     justify-content: center;
     align-items: center;

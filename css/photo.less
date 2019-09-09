@@ -1,0 +1,362 @@
+@download: #1d2631;
+@basic: #283645;
+@hover: #d22856;
+@triangle: #f2f2f2;
+
+.wrapper {
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+li {list-style-type: none;}
+
+/* ----------------------------------- Header ----------------------------------- */
+
+header {
+  
+  .headerStatic {
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-right: 20px;
+    justify-content: space-between;
+    height: 66px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 50%);
+    display: flex;
+    align-items: center;
+    position: absolute;
+    z-index: 100;
+  }
+
+  .header-menu {
+    &-mobile {
+      background-image: url(../images/burger.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 24px;
+      width: 50px;
+      cursor: pointer;
+    }
+  }
+}
+
+/* ----------------------------------- Полноэкранный блок ----------------------------------- */
+
+.phoneBlock-photo {
+  background-image: url(../images/background-01.jpg);
+  background-position: center;
+  background-size: cover;
+  box-sizing: border-box;
+  height: 240px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29px;
+    width: 70%;
+    text-align: center;
+  }
+}
+
+/* ----------------------------------- Фотографии пользователей ----------------------------------- */
+
+.sectionPhotos {
+
+  &-text {
+    font-size: 14px;
+    line-height: 30px;
+    padding: 50px 0;
+    text-align: center;
+  }
+}
+
+.userPhoto {
+
+  li + li {
+    margin-top: 20px;
+  }
+
+  &-image {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 180px;
+
+    & > .wrapper {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+  &-text {
+    background-color: @triangle;
+    padding: 24px 18px;
+    box-sizing: border-box;
+    font-size: 14px;
+
+    &-name {font-weight: 700;}
+
+    &-time {
+      text-transform: uppercase;
+      color: #949aa1;
+    }
+
+    &-like {
+      color: @hover;
+      margin-top: 15px;
+      text-transform: uppercase;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.ofTheDay {
+  &-height {height: 137px;}
+
+  &-block {
+    background-color: @hover;
+    color: #fff;
+    width: 140px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+}
+
+/* ----------------------------------- Инструмент для постинга ----------------------------------- */
+
+.post {
+  background-color: @triangle;
+  padding-top: 24px;
+
+  &-image {
+    background-image: url(../images/8.jpg);
+    width: 100%;
+    height: 374px; 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 42px;
+  }
+
+  &-tools {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg + svg {margin-left: 38px;}
+
+    svg {cursor: pointer;}
+  }
+
+  &-slider {
+    position: relative;
+    background: #f4f4f4;
+    border-radius: 8px;
+    width: 100%;
+    height: 18px;
+    padding-top: 33px;
+    padding-bottom: 17px;
+    display: flex;
+    justify-content: center;
+
+    #fader {
+      width: 85%;
+      height: 2px;
+      background: @basic;
+      -webkit-appearance: none;
+      outline: none;
+
+      &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background: #fff;
+        border: 2px solid @hover;
+        transition: background 0.3s ease;
+        &:hover {background: @hover;}
+      }
+    }
+  }
+
+  &-hr {
+    background-color: #dddfe0;
+    height: 1px;
+  }
+
+  &-buttons {
+    padding: 39px 0;
+
+    & > .wrapper {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    a + a {margin-top: 12px;}
+
+    &-post {
+      box-sizing: border-box;
+      border: 3px solid @hover;
+      background: #fff;
+      width: 280px;
+      border-radius: 30px;
+      padding: 15px 35px;
+      margin: 0 auto;
+      font-weight: bold;
+      color: @hover;
+      text-decoration: none;
+      transition: 0.3s;
+      font-size: 14px;
+      text-align: center;
+      transition: background-color 0.3s ease, color 0.3s ease;
+
+      &:hover {
+        background-color: @hover;
+        color: #fff;
+      }
+
+      &:active {
+        background-color: @hover;
+        color: fadeout(#fff, 30%);
+      }
+    }
+
+    &-cancel {
+      box-sizing: border-box;
+      border: 3px solid #dddfe0;
+      background: #fff;
+      width: 280px;
+      border-radius: 30px;
+      padding: 15px 35px;
+      margin: 0 auto;
+      font-weight: bold;
+      color: #dddfe0;
+      text-decoration: none;
+      transition: 0.3s;
+      font-size: 14px;
+      text-align: center;
+      transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+
+      &:hover {
+        color: fadeout(@basic, 30%);
+        border: 3px solid #b5b9be;
+      }
+
+      &:active {
+        background-color: #b5b9be;
+        color: fadeout(#fff, 30%);
+      }
+    }
+  }
+}
+
+/* ----------------------------------- Футер------------------------------------ */
+
+.footer {
+  padding: 40px 0;
+  display: flex;
+
+  &-logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+
+  &-social {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 39px;
+    
+    a + a {margin-left: 30px;}
+
+    a {
+      border-radius: 50%;
+      border: 3px solid #e9ebec;
+      width: 51px;
+      height: 51px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: border 0.3s ease, opacity 0.3s ease;
+      &:hover {border: 3px solid @basic;}
+      &:active {opacity: 0.3;}
+    }
+  }
+
+  &-copyright {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    a {
+      svg{
+        #lantaHand {
+          fill: @hover;
+          transition: fill 0.3s ease;
+        }
+      }
+      &:hover #lantaHand {fill: #000;}
+      &:active #lantaHand {fill: #bec2c7;}
+    }
+  }
+}
+
+/* ----------------------------------- Оформление меню ----------------------------------- */
+
+.mobileMenu {
+  display: none;
+  width: 100%;
+  border-top: 1px solid #000;
+  position: relative;
+  top: 66px;
+  z-index: 1000;
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 66px;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: @basic;
+    border-top: 1px solid #485461;
+    border-bottom: 1px solid #000;
+    text-align: center;
+
+    &:hover {
+      background-color: @download;
+    }
+  }
+}
+
+.headerActive {background-color: @basic !important;}
+
+.header-menu-close {background-image: url(../images/close.png) !important;}
+
+.userPhoto-text-like::before {
+  content: '';
+  display: block;
+  width: 13px;
+  height: 12px;
+  background-image: url(../images/icon-heart.svg);
+  margin-right: 15px;
+  cursor: pointer;
+}

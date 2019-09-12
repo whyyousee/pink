@@ -66,7 +66,7 @@ header {
   }
 }
 
-/* ----------------------------------- Фотографии пользователей ----------------------------------- */
+/* ----------------------------------- Основной контент ----------------------------------- */
 
 .sectionForm {
 
@@ -76,6 +76,54 @@ header {
     padding: 50px 0;
     text-align: center;
   }
+}
+
+.form {
+
+  form {
+    display: flex;
+    flex-direction: column;
+
+    input {
+      padding: 20px;
+      border: 2px solid #e5e5e5;
+      outline: none;
+      border-radius: 2px;
+      font-size: 18px;
+      font-family: "Open Sans", 'Arial', sans-serif;
+
+      &:hover {border: 2px solid @basic;}
+      &:active {border: 2px solid @hover;}
+    }
+    
+    p {
+      text-transform: uppercase;
+      margin: 25px 0 14px 22px;
+      font-size: 14px;
+      color: @hover;
+    }
+
+    button {
+      outline: none;
+      text-transform: uppercase;
+      text-decoration: none;  
+      outline: none;
+      border: 0;
+      cursor: pointer;
+      margin-top: 48px;
+      margin-bottom: 44px;
+      background-color: #2aab6d;
+      text-align: center;
+      font-size: 18px;
+      color: #fff;
+      font-weight: 700;
+      padding-top: 24px;
+      padding-bottom: 24px;
+      border-radius: 2px;
+      font-family: "Open Sans", 'Arial', sans-serif;
+    }
+  }
+
 }
 
 /* ----------------------------------- Футер------------------------------------ */

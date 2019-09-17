@@ -167,7 +167,6 @@ header {
 
     &-heading {
       text-transform: uppercase;
-      margin: ;
       font-size: 14px;
       text-align: center;
       color: @hover;
@@ -193,16 +192,17 @@ header {
       left: 0;
       width: 40px;
       height: 40px;
+      background-color: #fff;
       border-radius: 1px;
       border: 2px solid #e5e5e5;
-      transition: border 0.3s ease, background 0.3s ease;
     }
 
     .checkbox input:checked + .checkbox__text:before {
-      background: url(../images/checked.png);
+      background-image: url(../images/checked.png);
       background-position: center;
       background-repeat: no-repeat;
       background-size: 22px 16px;
+      background-color: #fff;
     }
 
     .checkbox:hover .checkbox__text:before {
@@ -219,8 +219,60 @@ header {
     margin-top: 50px;
     margin-bottom: 17px;
     background-color: #f2f2f2;
+    color: @basic;
     padding-top: 42px;
     padding-bottom: 50px;
+    
+    li + li {margin-top: 53px;}
+
+    &-heading {
+      text-transform: uppercase;
+      font-size: 14px;
+      text-align: center;
+      color: @hover;
+      margin-bottom: 44px;
+    }
+
+    .radio input {
+      opacity: 0;
+      z-index: 1;
+      margin: 0;
+    }
+
+    .radio__text {
+      position: relative;
+      cursor: pointer;
+      padding-left: 71px;
+    }
+
+    .radio__text:before {
+      content: '';
+      position: absolute;
+      top: -8px;
+      left: 0;
+      width: 38px;
+      height: 38px;
+      background-color: #fff;
+      border: 1px solid #CDD1DA;
+      border-radius: 50%;
+      background: #FFF;
+    }
+
+    .radio input:checked + .radio__text:before {
+      background-image: url(../images/radio.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 15px 15px;
+      background-color: #fff;
+    }
+
+    .radio:hover .radio__text:before {
+      border: 2px solid @basic;
+    }
+
+    .radio:active .radio__text:before {
+      border: 2px solid @hover;
+    }
   }
 
   &-required {

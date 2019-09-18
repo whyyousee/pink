@@ -96,7 +96,7 @@ header {
       border-radius: 2px;
       font-size: 18px;
       font-family: "Open Sans", 'Arial', sans-serif;
-      transition: border 3s ease;
+      transition: border 0.3s ease;
 
       &:hover {border: 2px solid @basic;}
       &:focus {border: 2px solid @hover;}
@@ -121,7 +121,7 @@ header {
       font-size: 18px;
       font-family: "Open Sans", 'Arial', sans-serif;
       resize: none;
-      transition: border 3s ease; 
+      transition: border 0.3s ease; 
 
       &:hover {border: 2px solid @basic;}
       &:focus {border: 2px solid @hover;}
@@ -155,7 +155,7 @@ header {
   
   &-textarea-heading {text-align: center;}
     
-  &-checkboxes {
+  &-CB {
     margin-top: 50px;
     margin-bottom: 17px;
     color: @basic;
@@ -195,10 +195,11 @@ header {
       background-color: #fff;
       border-radius: 1px;
       border: 2px solid #e5e5e5;
+      transition: border 0.3s ease, background 0s linear;
     }
 
     .checkbox input:checked + .checkbox__text:before {
-      background-image: url(../images/checked.png);
+      background: url(../images/checked.png);
       background-position: center;
       background-repeat: no-repeat;
       background-size: 22px 16px;
@@ -212,10 +213,9 @@ header {
     .checkbox:active .checkbox__text:before {
       border: 2px solid @hover;
     }
-
   }
 
-  &-radiobuttons {
+  &-RB {
     margin-top: 50px;
     margin-bottom: 17px;
     background-color: #f2f2f2;
@@ -256,10 +256,11 @@ header {
       border: 1px solid #CDD1DA;
       border-radius: 50%;
       background: #FFF;
+      transition: border 0.3s ease, background 0s linear;
     }
 
     .radio input:checked + .radio__text:before {
-      background-image: url(../images/radio.png);
+      background: url(../images/radio.png);
       background-position: center;
       background-repeat: no-repeat;
       background-size: 15px 15px;

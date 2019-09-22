@@ -1,0 +1,53 @@
+@download: #1d2631;
+@basic: #283645;
+@hover: #d22856;
+@triangle: #f2f2f2;
+
+.footer {
+  padding: 40px 0;
+  display: flex;
+
+  &-logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+
+  &-social {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 39px;
+    
+    a + a {margin-left: 30px;}
+
+    a {
+      border-radius: 50%;
+      border: 3px solid #e9ebec;
+      width: 51px;
+      height: 51px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: border 0.3s ease, opacity 0.3s ease;
+      &:hover {border: 3px solid @basic;}
+      &:active {opacity: 0.3;}
+    }
+  }
+
+  &-copyright {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    a {
+      svg{
+        #lantaHand {
+          fill: @hover;
+          transition: fill 0.3s ease;
+        }
+      }
+      &:hover #lantaHand {fill: #000;}
+      &:active #lantaHand {fill: #bec2c7;}
+    }
+  }
+}

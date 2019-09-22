@@ -12,36 +12,6 @@
 
 li {list-style-type: none;}
 
-/* ----------------------------------- Header ----------------------------------- */
-
-header {
-  
-  .headerStatic {
-    box-sizing: border-box;
-    padding-left: 20px;
-    padding-right: 20px;
-    justify-content: space-between;
-    height: 66px;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 50%);
-    display: flex;
-    align-items: center;
-    position: absolute;
-    z-index: 100;
-  }
-
-  .header-menu {
-    &-mobile {
-      background-image: url(../images/burger.png);
-      background-position: center;
-      background-repeat: no-repeat;
-      height: 24px;
-      width: 50px;
-      cursor: pointer;
-    }
-  }
-}
-
 /* ----------------------------------- Полноэкранный блок ----------------------------------- */
 
 .phoneBlock-photo {
@@ -265,91 +235,6 @@ header {
     }
   }
 }
-
-/* ----------------------------------- Футер------------------------------------ */
-
-.footer {
-  padding: 40px 0;
-  display: flex;
-
-  &-logo {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 40px;
-  }
-
-  &-social {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 39px;
-    
-    a + a {margin-left: 30px;}
-
-    a {
-      border-radius: 50%;
-      border: 3px solid #e9ebec;
-      width: 51px;
-      height: 51px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transition: border 0.3s ease, opacity 0.3s ease;
-      &:hover {border: 3px solid @basic;}
-      &:active {opacity: 0.3;}
-    }
-  }
-
-  &-copyright {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    a {
-      svg{
-        #lantaHand {
-          fill: @hover;
-          transition: fill 0.3s ease;
-        }
-      }
-      &:hover #lantaHand {fill: #000;}
-      &:active #lantaHand {fill: #bec2c7;}
-    }
-  }
-}
-
-/* ----------------------------------- Оформление меню ----------------------------------- */
-
-.mobileMenu {
-  display: none;
-  width: 100%;
-  border-top: 1px solid #000;
-  position: relative;
-  top: 66px;
-  z-index: 1000;
-
-  a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 66px;
-    color: #fff;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-decoration: none;
-    background-color: @basic;
-    border-top: 1px solid #485461;
-    border-bottom: 1px solid #000;
-    text-align: center;
-
-    &:hover {
-      background-color: @download;
-    }
-  }
-}
-
-.headerActive {background-color: @basic !important;}
-
-.header-menu-close {background-image: url(../images/close.png) !important;}
 
 .userPhoto-text-like::before {
   content: '';

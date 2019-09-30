@@ -6,10 +6,7 @@
 		<title>Фотографии пользователей | Pink</title>
 		<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="../css/base.css">
-		<link rel="stylesheet" href="../css/header.css">
-		<link rel="stylesheet" href="../css/footer.css">
-		<link rel="stylesheet" href="../css/photo.css">
+		<link rel="stylesheet" href="../css/style.css">
 	</head>
 	<body>
 
@@ -42,28 +39,26 @@
 					</div>
 				</div>
 
+
+				<div class="panorama">
+					<img src="../images/1.jpg" alt="">
+						<div class="panorama-label">Панорама дня</div>
+				</div>
+				<div class="wrapper">
+					<div class="userPhoto-text">
+						<p><span class="userPhoto-text-name">Анна</span> <span class="userPhoto-text-time">(5 минут назад)</span><br>
+						Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!
+						<div class="userPhoto-text-like">
+						Нравится: 215
+						</div>
+					</div>
+				</div>
+				
 				<ul class="userPhoto">
+					<div class="wrapper">
 
-					<li>
-						<div class="userPhoto-image ofTheDay-height" style="    background-image: url(../images/1.jpg);">
-							<div class="wrapper">
-								<div class="ofTheDay-block">Панорама дня</div>
-							</div>
-						</div>
-							<div class="wrapper">
-							<div class="userPhoto-text">
-								<p><span class="userPhoto-text-name">Анна</span> <span class="userPhoto-text-time">(5 минут назад)</span><br>
-								Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!
-								<div class="userPhoto-text-like">
-								Нравится: 215
-								</div>
-							</div>
-						</div>
-					</li>
-
-					<li>
-						<div class="wrapper">
-							<div class="userPhoto-image" style="    background-image: url(../images/2.jpg);"></div>
+						<li>
+							<img src="../images/2.jpg" alt="">
 							<div class="userPhoto-text">
 								<p><span class="userPhoto-text-name">Левон</span> <span class="userPhoto-text-time">(5 часов назад)</span><br>
 								Вчера он на луну летал, сегодня в руки к нам попал.
@@ -71,12 +66,10 @@
 								Нравится: 356
 								</div>
 							</div>
-						</div>
-					</li>
+						</li>
 
-					<li>
-						<div class="wrapper">
-							<div class="userPhoto-image" style="    background-image: url(../images/3.jpg);"></div>
+						<li>
+							<img src="../images/3.jpg" alt="">
 							<div class="userPhoto-text">
 								<p><span class="userPhoto-text-name">Антон</span> <span class="userPhoto-text-time">(12 часов назад)</span><br>
 								Соседи будут рады!
@@ -84,12 +77,10 @@
 								Нравится: 666
 								</div>
 							</div>
-						</div>
-					</li>
+						</li>
 
-					<li>
-						<div class="wrapper">
-							<div class="userPhoto-image" style="    background-image: url(../images/4.jpg);"></div>
+						<li>
+							<img src="../images/4.jpg" alt="">
 							<div class="userPhoto-text">
 								<p><span class="userPhoto-text-name">Борис</span> <span class="userPhoto-text-time">(20 часов назад)</span><br>
 								Здесь могла быть ваша цитата о высоком и вечном.
@@ -97,12 +88,10 @@
 								Нравится: 343
 								</div>
 							</div>
-						</div>
-					</li>
+						</li>
 
-					<li>
-						<div class="wrapper">
-							<div class="userPhoto-image" style="    background-image: url(../images/5.jpg);"></div>
+						<li>
+							<img src="../images/5.jpg" alt="">
 							<div class="userPhoto-text">
 								<p><span class="userPhoto-text-name">Сергей</span> <span class="userPhoto-text-time">(25 часов назад)</span><br>
 								Самая кубанская в мире!
@@ -110,12 +99,10 @@
 								Нравится: 4
 								</div>
 							</div>
-						</div>
-					</li>
+						</li>
 
-					<li>
-						<div class="wrapper">
-							<div class="userPhoto-image" style="    background-image: url(../images/6.jpg);"></div>
+						<li>
+							<img src="../images/6.jpg" alt="">
 							<div class="userPhoto-text">
 								<p><span class="userPhoto-text-name">Максим</span> <span class="userPhoto-text-time">(40 часов назад)</span><br>
 								Где снег-то?
@@ -123,21 +110,19 @@
 								Нравится: 150
 								</div>
 							</div>
-						</div>
-					</li>
+						</li>
 
-					<li>
-						<div class="wrapper">
-							<div class="userPhoto-image" style="    background-image: url(../images/7.jpg);"></div>
+						<li>
+							<img src="../images/7.jpg" alt="">
 							<div class="userPhoto-text">
 								<p><span class="userPhoto-text-name">Надежда</span> <span class="userPhoto-text-time">(45 часов назад)</span><br>
 								Всем GM и взаимные лайки!
 								<div class="userPhoto-text-like">
 								Нравится: 2560
 								</div>
-							</div>
-					</li>
+						</li>
 
+					</div>
 				</ul>
 
 				<div class="sectionPhotos-text">
@@ -151,56 +136,62 @@
 			<section class="post">
 				<div class="wrapper">
 					<div class="post-image"></div>
-					<div class="post-tools">
+					<ul class="post-tools">
+						
+						<li>
+							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="44" height="44" viewBox="0 0 44 44">
+							<metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+							<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c142 79.160924, 2017/07/13-01:06:39        ">
+							<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+							<rdf:Description rdf:about=""/>
+							</rdf:RDF>
+							</x:xmpmeta>
+							<?xpacket end="w"?></metadata>
+							<image id="crop.svg" width="44" height="44" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsBAMAAADsqkcyAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAElBMVEXSKFb////SKFbSKFbSKFYAAAC6YJ/hAAAABHRSTlMAAN9Q3ljuvgAAAAFiS0dEBfhv6ccAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjCBIWJjkSFMO3AAAASElEQVQoz2NgAAIXFwY4EAQDhkEv7AIGDFDaxcXJEKuwizN2YSfswi5YrRwVpq8w9ZMPOgALq2AXNsEuzKyCVRgZIHlnMAsDAMLlS1BzkBnQAAAAAElFTkSuQmCC"/>
+							</svg>
+						</li>
 
-						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="44" height="44" viewBox="0 0 44 44">
-						<metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
-						<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c142 79.160924, 2017/07/13-01:06:39        ">
-						<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-						<rdf:Description rdf:about=""/>
-						</rdf:RDF>
-						</x:xmpmeta>
-						<?xpacket end="w"?></metadata>
-						<image id="crop.svg" width="44" height="44" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsBAMAAADsqkcyAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAElBMVEXSKFb////SKFbSKFbSKFYAAAC6YJ/hAAAABHRSTlMAAN9Q3ljuvgAAAAFiS0dEBfhv6ccAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjCBIWJjkSFMO3AAAASElEQVQoz2NgAAIXFwY4EAQDhkEv7AIGDFDaxcXJEKuwizN2YSfswi5YrRwVpq8w9ZMPOgALq2AXNsEuzKyCVRgZIHlnMAsDAMLlS1BzkBnQAAAAAElFTkSuQmCC"/>
-						</svg>
+						<li>
+							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="43" viewBox="0 0 48 43">
+							<metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+							<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c142 79.160924, 2017/07/13-01:06:39        ">
+							<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+							<rdf:Description rdf:about=""/>
+							</rdf:RDF>
+							</x:xmpmeta>                       
+							<?xpacket end="w"?></metadata>
+							<defs>
+							<style>
+							.cls-1 {
+							opacity: 0.3;
+							}
+							</style>
+							</defs>
+							<image id="fill.svg" class="cls-1" width="48" height="43" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAArBAMAAADMPRbsAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAALVBMVEUoNkUoNkUoNkUoNkUoNkUoNkUoNkUoNkUoNkUoNkUoNkUoNkUoNkUoNkUAAACaVyhTAAAADnRSTlMAMD8FTSsOSBM6J0MdGH4fv0sAAAABYktHRA5vvTBPAAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH4wgSFicxBdR6xAAAAM5JREFUOMtjYIAAIQMGrIDRRRm7RIiLE3Yt6S44tLCVUFFLCw4tzCou2LUYubhg1QLU4I7VFqCGMmwOA2lIwOYwkAZsfgFrwOYXiAZMLVANmFpgGjC0TIFqAGvxRJKAawBrQZFABihGIQFPVMsRANlyUJDDANC5jALYtAA1LPHCogWogcPFpQFTC1ADt4vLBgwtoAA54uLig+EwkJO2uLh4ozsMHIJonkQkBjQJRPJBNQqsBeLpKy4uviixNcUTEke8W7wvMAxa4IIDkC4BAHpgYbjh+ZoiAAAAAElFTkSuQmCC"/>
+							</svg>
+						</li>
 
-						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="43" viewBox="0 0 48 43">
-						<metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
-						<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c142 79.160924, 2017/07/13-01:06:39        ">
-						<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-						<rdf:Description rdf:about=""/>
-						</rdf:RDF>
-						</x:xmpmeta>                       
-						<?xpacket end="w"?></metadata>
-						<defs>
-						<style>
-						.cls-1 {
-						opacity: 0.3;
-						}
-						</style>
-						</defs>
-						<image id="fill.svg" class="cls-1" width="48" height="43" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAArBAMAAADMPRbsAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAALVBMVEUoNkUoNkUoNkUoNkUoNkUoNkUoNkUoNkUoNkUoNkUoNkUoNkUoNkUoNkUAAACaVyhTAAAADnRSTlMAMD8FTSsOSBM6J0MdGH4fv0sAAAABYktHRA5vvTBPAAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH4wgSFicxBdR6xAAAAM5JREFUOMtjYIAAIQMGrIDRRRm7RIiLE3Yt6S44tLCVUFFLCw4tzCou2LUYubhg1QLU4I7VFqCGMmwOA2lIwOYwkAZsfgFrwOYXiAZMLVANmFpgGjC0TIFqAGvxRJKAawBrQZFABihGIQFPVMsRANlyUJDDANC5jALYtAA1LPHCogWogcPFpQFTC1ADt4vLBgwtoAA54uLig+EwkJO2uLh4ozsMHIJonkQkBjQJRPJBNQqsBeLpKy4uviixNcUTEke8W7wvMAxa4IIDkC4BAHpgYbjh+ZoiAAAAAElFTkSuQmCC"/>
-						</svg>
+						<li>
+							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+							<metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+							<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c142 79.160924, 2017/07/13-01:06:39        ">
+							<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+							<rdf:Description rdf:about=""/>
+							</rdf:RDF>
+							</x:xmpmeta>                          
+							<?xpacket end="w"?></metadata>
+							<defs>
+							<style>
+							.cls-1 {
+							opacity: 0.3;
+							}
+							</style>
+							</defs>
+							<image id="contrast.svg" class="cls-1" width="32" height="32" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAANlBMVEUoNkUoNkUoNkUoNkUoNkUoNkUoNkUoNkUoNkUoNkUoNkUoNkUoNkUoNkUoNkUoNkUoNkUAAAB+V1CyAAAAEXRSTlMADic6TR0/ChhINSITBTBDK1NerLUAAAABYktHRBHitT26AAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH4wgSFigKM0ePLwAAAN5JREFUOMuFU1sChCAIRDAzH9X9T7uKj0xtnR8DB5gQACoEkmQQChixKdlAbd31TrID7e29PuSAQzfps89YF2BNNmsZnWz0xeExeXKOnfOrl3LBko+kg/WpEk6E0e2ZQVVAvYdonb4wogz+ePJz8SvYggPzifAmcEZMkXz4niDvUCSFRokGBkKMMSwzGnZCCPJsPNnhJoRQw/0l0IpgVgRsCTORuoj8+M0Lym9+NErXRs1bfUJt9fSxbngea/Lc5KB97m5gcOMxagZmPXLLoV2P/Xpx1qsHw/JqGDFf/x/FOguAeEpXXAAAAABJRU5ErkJggg=="/>
+							</svg>
+						<li>
 
-						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
-						<metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
-						<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c142 79.160924, 2017/07/13-01:06:39        ">
-						<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-						<rdf:Description rdf:about=""/>
-						</rdf:RDF>
-						</x:xmpmeta>                          
-						<?xpacket end="w"?></metadata>
-						<defs>
-						<style>
-						.cls-1 {
-						opacity: 0.3;
-						}
-						</style>
-						</defs>
-						<image id="contrast.svg" class="cls-1" width="32" height="32" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAANlBMVEUoNkUoNkUoNkUoNkUoNkUoNkUoNkUoNkUoNkUoNkUoNkUoNkUoNkUoNkUoNkUoNkUoNkUAAAB+V1CyAAAAEXRSTlMADic6TR0/ChhINSITBTBDK1NerLUAAAABYktHRBHitT26AAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH4wgSFigKM0ePLwAAAN5JREFUOMuFU1sChCAIRDAzH9X9T7uKj0xtnR8DB5gQACoEkmQQChixKdlAbd31TrID7e29PuSAQzfps89YF2BNNmsZnWz0xeExeXKOnfOrl3LBko+kg/WpEk6E0e2ZQVVAvYdonb4wogz+ePJz8SvYggPzifAmcEZMkXz4niDvUCSFRokGBkKMMSwzGnZCCPJsPNnhJoRQw/0l0IpgVgRsCTORuoj8+M0Lym9+NErXRs1bfUJt9fSxbngea/Lc5KB97m5gcOMxagZmPXLLoV2P/Xpx1qsHw/JqGDFf/x/FOguAeEpXXAAAAABJRU5ErkJggg=="/>
-						</svg>
-
-					</div>
+					</ul>
 					<div class="post-slider">
 						<input type="range" id="fader" min="0" max="600" value="0" step="1" oninput="outputUpdate(value)">
 					</div>

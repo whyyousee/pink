@@ -1,19 +1,4 @@
-@download: #1d2631;
-@basic: #283645;
-@hover: #d22856;
-@triangle: #f2f2f2;
-
-.wrapper {
-  width: 100%;
-  box-sizing: border-box;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-li {list-style-type: none;}
-
 /* ----------------------------------- Полноэкранный блок ----------------------------------- */
-
 .phoneBlock-photo {
   background-image: url(../images/background-01.jpg);
   background-position: center;
@@ -35,8 +20,35 @@ li {list-style-type: none;}
   }
 }
 
-/* ----------------------------------- Фотографии пользователей ----------------------------------- */
 
+/* ----------------------------------- Панорамное фото ----------------------------------- */
+.panorama {
+  position: relative;
+  line-height: 0;
+  display: flex;
+  justify-content: flex-end;
+
+  img {width: 100%;}
+
+  &-label {
+    position: absolute;
+    top: 0;
+    margin-right: 20px;
+    background-color: @hover;
+    color: #fff;
+    width: 140px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+}
+
+
+/* ----------------------------------- Фотографии ----------------------------------- */
 .sectionPhotos {
 
   &-text {
@@ -48,29 +60,21 @@ li {list-style-type: none;}
 }
 
 .userPhoto {
+  line-height: 0;
+  margin-top: 20px;
 
   li + li {
     margin-top: 20px;
   }
 
-  &-image {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    width: 100%;
-    height: 180px;
-
-    & > .wrapper {
-      display: flex;
-      justify-content: flex-end;
-    }
-  }
+  img {width: 100%;}
 
   &-text {
     background-color: @triangle;
     padding: 24px 18px;
     box-sizing: border-box;
     font-size: 14px;
+    line-height: 24px;
 
     &-name {font-weight: 700;}
 
@@ -90,25 +94,8 @@ li {list-style-type: none;}
   }
 }
 
-.ofTheDay {
-  &-height {height: 137px;}
 
-  &-block {
-    background-color: @hover;
-    color: #fff;
-    width: 140px;
-    height: 36px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
-    text-transform: uppercase;
-    text-align: center;
-  }
-}
-
-/* ----------------------------------- Инструмент для постинга ----------------------------------- */
-
+/* ----------------------------------- Инструменты для постинга ----------------------------------- */
 .post {
   background-color: @triangle;
   padding-top: 24px;
@@ -128,9 +115,9 @@ li {list-style-type: none;}
     justify-content: center;
     align-items: center;
 
-    svg + svg {margin-left: 38px;}
+    li + li {margin-left: 38px;}
 
-    svg {cursor: pointer;}
+    li {cursor: pointer;}
   }
 
   &-slider {
@@ -148,8 +135,8 @@ li {list-style-type: none;}
       width: 85%;
       height: 2px;
       background: @basic;
-      -webkit-appearance: none;
       outline: none;
+      -webkit-appearance: none;
 
       &::-webkit-slider-thumb {
         -webkit-appearance: none;

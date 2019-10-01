@@ -25,14 +25,17 @@
 .panorama {
   position: relative;
   line-height: 0;
-  display: flex;
-  justify-content: flex-end;
+
+  > .wrapper {
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: flex-end;
+  }
 
   img {width: 100%;}
 
   &-label {
-    position: absolute;
-    top: 0;
     margin-right: 20px;
     background-color: @hover;
     color: #fff;
@@ -69,18 +72,21 @@
 
   img {width: 100%;}
 
-  &-text {
+  &-ad {
     background-color: @triangle;
     padding: 24px 18px;
     box-sizing: border-box;
     font-size: 14px;
     line-height: 24px;
 
-    &-name {font-weight: 700;}
+    &-name {
+      font-weight: 700;
 
-    &-time {
-      text-transform: uppercase;
-      color: #949aa1;
+      span {
+        text-transform: uppercase;
+        color: #949aa1;
+        font-weight: 400;
+      }
     }
 
     &-like {
@@ -100,13 +106,8 @@
   background-color: @triangle;
   padding-top: 24px;
 
-  &-image {
-    background-image: url(../images/8.jpg);
+  img {
     width: 100%;
-    height: 374px; 
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
     margin-bottom: 42px;
   }
 
@@ -223,7 +224,7 @@
   }
 }
 
-.userPhoto-text-like::before {
+.userPhoto-ad-like::before {
   content: '';
   display: block;
   width: 13px;

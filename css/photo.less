@@ -119,6 +119,14 @@
     li + li {margin-left: 38px;}
 
     li {cursor: pointer;}
+
+    svg {
+      fill: #b5b9be;
+      transition: fill 0.3s ease;
+
+      &:hover {fill: #8d949b;}
+      &:active {fill: @hover;}
+    }
   }
 
   &-slider {

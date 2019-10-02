@@ -6,6 +6,14 @@
     display: flex;
     justify-content: center;
     margin-bottom: 40px;
+
+    a svg {
+      transition: fill 0.3s ease, opacity 0.3s ease;
+
+      &:hover .logoname {fill: @hover;}
+      &:active {opacity: 0.3;}
+      &:active .logoname {fill: @basic;}
+    }
   }
 
   &-social {
@@ -23,9 +31,15 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      transition: border 0.3s ease, opacity 0.3s ease;
+      transition: border 0.3s ease;
       &:hover {border: 3px solid @basic;}
-      &:active {opacity: 0.3;}
+      &:active {border: 3px solid fadeout(#e9ebec, 30%);}
+      &:active svg {opacity: 0.3;}
+
+      svg {
+        fill: @hover;
+        transition: opacity 0.3s ease;
+      }
     }
   }
 
@@ -34,15 +48,18 @@
     align-items: center;
     justify-content: center;
 
+    p {
+      margin-top: -5px;
+      margin-right: 15px;
+      font-size: 14px;}
+
     a {
       svg{
-        #lantaHand {
-          fill: @hover;
-          transition: fill 0.3s ease;
-        }
+        fill: @hover;
+        transition: fill 0.3s ease;
+        &:hover {fill: #000;}
+        &:active {fill: #bec2c7;}
       }
-      &:hover #lantaHand {fill: #000;}
-      &:active #lantaHand {fill: #bec2c7;}
     }
   }
 }

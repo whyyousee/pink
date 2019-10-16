@@ -40,8 +40,8 @@
     flex-direction: column;
 
     ::placeholder {color: @basic;}
-
-    input {
+  
+    .input__text {
       color: @basic;
       box-sizing: border-box;
       width: 100%;
@@ -107,82 +107,18 @@
       &:active {color: fadeout(#fff, 70%);;}
     }
   }
-  
-  &-textarea-heading {text-align: center;}
    
 
 /* ----------------------------------- Чекбоксы ----------------------------------- */
-  &-checkboxes {
+
+  .form-checkboxes {
     margin-top: 50px;
-    margin-bottom: 17px;
-    color: @basic;
-    background-color: #f2f2f2;
-    padding-top: 42px;
-    padding-bottom: 50px;
-
-    li + li {margin-top: 44px;}
-
-    &-heading {
-      text-transform: uppercase;
-      font-size: 14px;
-      text-align: center;
-      color: @hover;
-      margin-bottom: 25px;
-    }
-
-    .checkbox input {
-      opacity: 0;
-      z-index: 1;
-      margin: 0;
-    }
-
-    .checkbox__text {
-      position: relative;
-      padding: 0 0 0 60px;
-      cursor: pointer;
-    }
-
-    .checkbox__text:before {
-      content: '';
-      position: absolute;
-      top: -9px;
-      left: 0;
-      width: 40px;
-      height: 40px;
-      background-color: #fff;
-      border-radius: 1px;
-      border: 2px solid #e5e5e5;
-      transition: border 0.3s ease, background 0s linear;
-    }
-
-    .checkbox input:checked + .checkbox__text:before {
-      background: url(../images/checked.png);
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: 22px 16px;
-      background-color: #fff;
-    }
-
-    .checkbox:hover .checkbox__text:before {
-      border: 2px solid @basic;
-    }
-
-    .checkbox:active .checkbox__text:before {
-      border: 2px solid @hover;
-    }
-  }
-
-
-/* ----------------------------------- Радиобаттоны ----------------------------------- */
-  &-radio {
-    margin-top: 50px;
-    margin-bottom: 17px;
     background-color: #f2f2f2;
     color: @basic;
     padding-top: 42px;
-    padding-bottom: 50px;
+    padding-bottom: 43px;
     
-    li + li {margin-top: 53px;}
+    li + li {margin-top: 43px;}
 
     &-heading {
       text-transform: uppercase;
@@ -191,49 +127,59 @@
       color: @hover;
       margin-bottom: 44px;
     }
+  }
 
-    .radio input {
-      opacity: 0;
-      z-index: 1;
-      margin: 0;
-    }
+.check {
+  display: flex;
+  align-items: center;
 
-    .radio__text {
-      position: relative;
-      cursor: pointer;
-      padding-left: 71px;
-    }
+  &__input {
+    position: absolute;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 
-    .radio__text:before {
-      content: '';
-      position: absolute;
-      top: -8px;
-      left: 0;
-      width: 38px;
-      height: 38px;
-      background-color: #fff;
-      border: 2px solid #CDD1DA;
-      border-radius: 50%;
-      background: #FFF;
-      transition: border 0.3s ease, background 0s linear;
-    }
+    &:checked + .check__box {background-image: url(../images/checked.png);}
+    &:hover + .check__box {border: 2px solid @basic;}
+    &:active + .check__box {border: 2px solid @hover;}
+  }
 
-    .radio input:checked + .radio__text:before {
-      background: url(../images/radio.png);
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: 15px 15px;
-      background-color: #fff;
-    }
+  &__box {
+    margin-right: 31px;
+    width: 43px;
+    height: 43px;
+    background-color: #fff;
+    border: 2px solid #e5e5e5;
+    border-radius: 1px;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: border 0.3s ease, background-image 0.3s ease;
+  }
+}
 
-    .radio:hover .radio__text:before {
-      border: 2px solid @basic;
-    }
 
-    .radio:active .radio__text:before {
-      border: 2px solid @hover;
+/* ----------------------------------- Радиобаттоны ----------------------------------- */
+  .form-radio {
+    margin-top: 50px;
+    margin-bottom: 17px;
+    background-color: #f2f2f2;
+    color: @basic;
+    padding-top: 42px;
+    padding-bottom: 43px;
+    
+    li + li {margin-top: 37px;}
+
+    &-heading {
+      text-transform: uppercase;
+      font-size: 14px;
+      text-align: center;
+      color: @hover;
+      margin-bottom: 44px;
     }
   }
+
+
+  &-textarea-heading {text-align: center;}
 
   &-required {
     text-align: center;

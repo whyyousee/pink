@@ -46,11 +46,11 @@
 
 						<div class="wrapper">
 							<p>Фамилия</p>
-							<input type="text" placeholder="Укажите фамилию *" name="surname" required minlength="3">
+							<input class="input__text" type="text" placeholder="Укажите фамилию *" name="surname" required minlength="3">
 							<p>Имя</p>
-							<input type="text" placeholder="Введите ваше имя *" name="name" required minlength="3">
+							<input class="input__text" type="text" placeholder="Введите ваше имя *" name="name" required minlength="3">
 							<p>Отчество</p>
-							<input type="text" placeholder="Ну и отчество тоже" name="patronymic">
+							<input class="input__text" type="text" placeholder="Ну и отчество тоже" name="patronymic">
 						</div>
 
 						<div class="form-checkboxes">
@@ -58,38 +58,44 @@
 								<div class="form-checkboxes-heading">Ваши безбашенные достижения в путешествии</div>
 								<ul>
 									<li>
-										<label class="checkbox">
-										<input type="checkbox" />
+										<label class="check option">
+										<input type="checkbox" class="check__input" />
+										<span class="check__box"></span>
 										<div class="checkbox__text">Сделал селфи с акулой</div>
 										</label>
 									</li>
 									<li>
-										<label class="checkbox">
-										<input type="checkbox" />
+										<label class="check option">
+										<input type="checkbox" class="check__input" />
+										<span class="check__box"></span>
 										<div class="checkbox__text">Обгорел на пляже</div>
 										</label>
 									</li>
 									<li>
-										<label class="checkbox">
-										<input type="checkbox" />
+										<label class="check option">
+										<input type="checkbox" class="check__input" />
+										<span class="check__box"></span>
 										<div class="checkbox__text">Видел Чака Норриса</div>
 										</label>
 									</li>
 									<li>
-										<label class="checkbox">
-										<input type="checkbox" />
+										<label class="check option">
+										<input type="checkbox" class="check__input" />
+										<span class="check__box"></span>
 										<div class="checkbox__text">Накопил сувениров</div>
 										</label>
 									</li>
 									<li>
-										<label class="checkbox">
-										<input type="checkbox" />
+										<label class="check option">
+										<input type="checkbox" class="check__input" />
+										<span class="check__box"></span>
 										<div class="checkbox__text">Удержал башню</div>
 										</label>
 									</li>
 									<li>
-										<label class="checkbox">
-										<input type="checkbox" />
+										<label class="check option">
+										<input type="checkbox" class="check__input" />
+										<span class="check__box"></span>
 										<div class="checkbox__text">Разгромил отель</div>
 										</label>
 									</li>
@@ -99,9 +105,9 @@
 
 						<div class="wrapper">
 							<p>Номер телефона</p>
-							<input type="tel" placeholder="Номер, пожалуйста" name="phone" id="phone">
+							<input class="input__text" type="tel" placeholder="Номер, пожалуйста" name="phone" id="phone">
 							<p>Адрес почты</p>
-							<input type="email" placeholder="Введите почту *" name="email" id="email" required>
+							<input class="input__text" type="email" placeholder="Введите почту *" name="email" id="email" required>
 						</div>
 
 						<div class="form-radio">
@@ -199,3 +205,7 @@
 		<script src="../js/main.js"></script>
 	</body>
 </html
+
+
+
+

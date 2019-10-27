@@ -1,23 +1,30 @@
 .footer {
   display: flex;
-  padding: 70px 0;
+  padding: 40px 0;
   justify-content: space-between;
 
-  @media screen and (max-width: 600px) {padding: 40px 0;}
+  @media screen and (min-width: 600px) {padding: 70px 0;}
   
-  & > .wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  &-index {display: block;
+    @media screen and (min-width: 600px) {display: none;}
+  }
 
-    @media screen and (max-width: 600px) {display: block;}
+  & > .wrapper {
+    display: block;
+
+    @media screen and (min-width: 600px) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
   }
 
   &-logo {
     display: flex;
     justify-content: center;
+    margin-bottom: 40px;
 
-    @media screen and (max-width: 600px) {margin-bottom: 40px;}
+    @media screen and (min-width: 600px) {margin-bottom: 0;}
 
     a svg {
       transition: fill 0.3s ease, opacity 0.3s ease;
@@ -28,21 +35,23 @@
     }
 
     &-mobile {
-      display: none;
-      @media screen and (max-width: 600px) {display: block;}
+      display: block;
+      @media screen and (min-width: 600px) {display: none;}
     }
     &-desktop {
-       @media screen and (max-width: 600px) {display: none;}
+      display: none;
+      @media screen and (min-width: 600px) {display: block;}
     }
   }
 
   &-social {
     display: flex;
     justify-content: center;
+    margin-bottom: 39px;
 
-    @media screen and (max-width: 600px) {margin-bottom: 39px;}
+    @media screen and (min-width: 600px) {margin-bottom: 0;}
     
-    a + a {margin-left: 30px;}
+    a + a {margin-left: 11px;}
 
     a {
       border-radius: 50%;
@@ -68,11 +77,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 0;
+
+    @media screen and (min-width: 600px) {margin-top: 5px;}
 
     p {
       margin-right: 15px;
-      font-size: 14px;}
-      @media screen and (max-width: 600px) {margin-top: -5px;}
+      font-size: 14px;
+      margin-top: -5px;
+    }
 
     a {
       svg{

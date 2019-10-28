@@ -35,6 +35,18 @@
       height: 24px;
       width: 50px;
       cursor: pointer;
+
+      @media screen and (min-width: 940px) {display: none;}
+    }
+
+    &-points {
+      display: none;
+
+      @media screen and (min-width: 940px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
     }
   }
 }

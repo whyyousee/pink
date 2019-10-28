@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
 	$('.js-toggleMenu').click(function() {
-    	$('.mobileMenu').slideToggle(300);
+    	$('.js-menu').slideToggle(300);
     	$(".headerStatic").toggleClass("headerActive");
     	$(".header-menu-mobile").toggleClass("header-menu-close");
   	});

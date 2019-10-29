@@ -14,20 +14,53 @@
     & > .wrapper {
       display: flex;
       justify-content: space-between;
+      align-items: center;
     }
   }
 
 .header {
 
   &-logo {
-    background: url(../images/logo-pink-white-mobile.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 23px;
-    width: 75px;
+
+    &-mobile {
+
+      svg path {transition: opacity 0.3s ease, fill 0.3s ease;}
+      &:hover svg path {fill: @hover;}
+      &:active svg path {
+        opacity: 0.3;
+        fill: #fff;
+      }
+      @media screen and (min-width: 600px) {display: none;}
+    }
+
+    &-tablet {
+      display: none;
+
+      svg path {transition: opacity 0.3s ease, fill 0.3s ease;}
+      &:hover svg path {fill: @hover;}
+      &:active svg path {
+        opacity: 0.3;
+        fill: #fff;
+      }
+      @media screen and (min-width: 600px) {display: block;}
+      @media screen and (min-width: 940px) {display: none;} 
+    }
+
+    &-desktop {
+      display: none;
+      
+      svg path {transition: opacity 0.3s ease, fill 0.3s ease;}
+      &:hover svg path {fill: @hover;}
+      &:active svg path {
+        opacity: 0.3;
+        fill: #fff;
+      }
+      @media screen and (min-width: 940px) {display: block;} 
+    }
   }
 
   &-menu {
+
     &-mobile {
       background: url(../images/icon-menu-burger.svg);
       background-position: center;

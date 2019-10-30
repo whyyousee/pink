@@ -62,18 +62,22 @@
   &-menu {
 
     &-mobile {
-      background: url(../images/icon-menu-burger.svg);
-      background-position: center;
-      background-repeat: no-repeat;
-      height: 24px;
-      width: 50px;
       cursor: pointer;
 
+      svg path {transition: opacity 0.3s ease, fill 0.3s ease;}
+      &:hover svg path {fill: @hover;}
+      &:active svg path {opacity: 0.3;}
+
       @media screen and (min-width: 940px) {display: none;}
+
+      &-hidden {
+        display: none!important;
+      }
     }
 
     &-points {
       display: none;
+      width: 620px;
 
       @media screen and (min-width: 940px) {
         display: flex;
@@ -93,6 +97,7 @@
   z-index: 1000;
 
   @media screen and (min-width: 600px) {top: 110px;}
+  @media screen and (min-width: 940px) {display: none!important;}
 
   a {
     display: flex;
@@ -107,16 +112,36 @@
     border-top: 1px solid #485461;
     border-bottom: 1px solid #000;
     text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
 
     &:hover {
       background-color: @download;
+      color: @hover;
     }
+    &:active {color: fade(@hover, 30%);}
   }
 }
 
 .headerActive {
   background-color: @basic !important;
   transition: background-color 0s linear 0s !important;
+
+  @media screen and (min-width: 940px) {background-color: rgba(0, 0, 0, 50%)!important;}
 }
 
-.header-menu-close {background-image: url(../images/icon-menu-cross.svg) !important;}
+.header-menu-close {
+  display: none;
+  width: 49.94px;
+  cursor: pointer;
+
+  &-active {
+    display: flex;
+    justify-content: flex-end;
+
+    svg path {transition: opacity 0.3s ease, fill 0.3s ease;}
+    &:hover svg path {fill: @hover;}
+    &:active svg path {opacity: 0.3;}
+
+    @media screen and (min-width: 940px) {display: none;}
+  }
+}

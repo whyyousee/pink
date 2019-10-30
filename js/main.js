@@ -4,6 +4,8 @@ $(document).ready(function () {
     	$('.js-menu').slideToggle(300);
     	$(".headerStatic").toggleClass("headerActive");
     	$(".header-menu-mobile").toggleClass("header-menu-close");
+    	$(".header-menu-mobile").toggleClass("header-menu-mobile-hidden");
+    	$(".header-menu-close").toggleClass("header-menu-close-active");
   	});
 
 	$('.js-slick-reviews').slick({
